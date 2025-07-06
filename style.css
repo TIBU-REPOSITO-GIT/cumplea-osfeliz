@@ -18,7 +18,7 @@ canvas {
     z-index: 2;
     text-align: center;
     color: white;
-    padding: 0 10px; /* 🌟 pequeño padding lateral */
+    padding-top: 10px; /* 🔥 reduce espacio arriba */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,30 +29,29 @@ h1 {
     font-size: 3rem;
     color: #ffffff;
     text-shadow: 0 0 20px #ff69b4, 0 0 40px #ff69b4;
-    margin-top: 20px; /* 🌟 elimina espacio innecesario */
-    margin-bottom: 10px;
+    margin: 10px 0 5px 0;
 }
 
 h2 {
-    font-size: 2.5rem;
-    color: #ffffff;
+    font-size: 2.2rem;
+    color: #fff700;
     text-shadow: 0 0 20px #fff700, 0 0 40px #fff700;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .balloons {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin: 0 auto 30px auto; /* 🌟 sin margen superior */
+    margin: 0 auto 20px auto; /* 🔥 reduce espacio inferior */
     flex-wrap: wrap;
 }
 
 .balloon {
     --color: #ff69b4;
     --text-color: #fff;
-    width: 70px;
-    height: 90px;
+    width: 65px;
+    height: 85px;
     border-radius: 50% 50% 45% 45%;
     background: radial-gradient(circle at 35% 35%, #ffffff80, var(--color) 70%);
     box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.2),
@@ -61,7 +60,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--text-color);
     text-shadow: 0 0 8px var(--text-color);
     position: relative;
@@ -73,8 +72,8 @@ h2 {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 15px;
-    height: 25px;
+    width: 12px;
+    height: 20px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     transform: rotate(-20deg);
@@ -83,9 +82,9 @@ h2 {
 .balloon::after {
     content: '';
     position: absolute;
-    bottom: -25px;
+    bottom: -20px;
     width: 2px;
-    height: 25px;
+    height: 20px;
     background: #555;
     border-radius: 1px;
 }
@@ -99,62 +98,62 @@ h2 {
 /* 🎂 Pastel */
 .cake {
     position: relative;
-    width: 150px;
-    height: 120px;
-    margin: 30px auto;
+    width: 140px;
+    height: 110px;
+    margin: 20px auto 20px auto;
 }
 
 .plate {
-    width: 180px;
-    height: 20px;
+    width: 160px;
+    height: 18px;
     background: #ccc;
     border-radius: 50%;
     position: absolute;
     bottom: 0;
-    left: calc(50% - 90px);
+    left: calc(50% - 80px);
     z-index: 1;
 }
 
 .layers {
-    width: 150px;
-    height: 90px;
+    width: 140px;
+    height: 85px;
     background: #333;
     border-radius: 10px;
     position: absolute;
-    bottom: 20px;
-    left: calc(50% - 75px);
+    bottom: 18px;
+    left: calc(50% - 70px);
     z-index: 2;
 }
 
 .icing {
-    width: 150px;
-    height: 30px;
+    width: 140px;
+    height: 28px;
     background: #ff69b4;
     border-radius: 50% / 20%;
     position: absolute;
-    bottom: 90px;
-    left: calc(50% - 75px);
+    bottom: 85px;
+    left: calc(50% - 70px);
     z-index: 3;
 }
 
 .candle {
-    width: 10px;
-    height: 30px;
+    width: 8px;
+    height: 28px;
     background: #800080;
     border-radius: 2px;
     position: absolute;
-    bottom: 120px;
-    left: calc(50% - 5px);
+    bottom: 113px;
+    left: calc(50% - 4px);
     z-index: 4;
 }
 
 .flame {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     background: orange;
     border-radius: 50%;
     position: absolute;
-    top: -16px;
+    top: -14px;
     left: -2px;
     box-shadow: 0 0 30px yellow, 0 0 50px orange;
     animation: flicker 0.3s infinite alternate;
@@ -176,9 +175,10 @@ h2 {
     box-shadow: 0 6px 0 #D32F2F, 0 8px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.2s;
     cursor: pointer;
-    max-width: 300px;
     display: block;
-    margin: 30px auto;
+    margin: 25px auto 40px auto; /* 🔥 centrado absoluto */
+    max-width: 250px;
+    text-align: center;
 }
 
 .play-button:hover {
@@ -192,70 +192,21 @@ h2 {
 }
 
 /* 📱 Responsive */
-@media (max-width: 768px) {
-    .balloon {
-        width: 50px;
-        height: 65px;
-        font-size: 1.5rem;
-    }
-
-    .cake {
-        margin-top: 40px;
-    }
-
-    .plate {
-        width: 150px;
-        left: calc(50% - 75px);
-    }
-
-    .layers, .icing {
-        width: 120px;
-        left: calc(50% - 60px);
-    }
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-}
-
 @media (max-width: 480px) {
     h2 {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
-
     .cake {
-        margin: 20px auto;
+        margin: 15px auto;
     }
-
     .play-button {
-        margin: 20px auto;
-        width: 85%;
-        max-width: 250px;
-        font-size: 1rem;
+        width: 80%;
+        max-width: 220px;
         padding: 12px 20px;
     }
-
     .balloon {
-        width: 40px;
-        height: 55px;
-        font-size: 1.2rem;
-    }
-
-    .plate {
-        width: 110px;
-        left: calc(50% - 55px);
-    }
-
-    .layers, .icing {
-        width: 90px;
-        left: calc(50% - 45px);
-    }
-
-    h1 {
-        font-size: 1.8rem;
+        width: 50px;
+        height: 70px;
+        font-size: 1.5rem;
     }
 }
