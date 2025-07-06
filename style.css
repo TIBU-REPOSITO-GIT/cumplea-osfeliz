@@ -222,29 +222,32 @@ h2 {
 
 @media (max-width: 480px) {
     h2 {
-        margin-bottom: 90px; /* ✅ más separación debajo de ALISSON */
+        margin-bottom: 100px; /* ✅ más separación debajo */
+    }
+
+    .content {
+        min-height: auto; /* ✅ quita altura fija en móviles */
     }
 
     .cake {
-        position: fixed;      /* ✅ sacamos del flujo normal */
-        top: 65%;             /* ✅ baja el pastel al 65% de pantalla */
+        position: absolute;   /* ✅ mejor soporte en iPhone */
+        top: 65%;             /* ✅ baja el pastel */
         left: 50%;
         transform: translateX(-50%);
         z-index: 5;
     }
 
     .play-button {
-    position: fixed;
-    bottom: 20px;           /* 🔥 Separación del borde inferior */
-    left: 50%;              /* 🔥 Centra horizontalmente */
-    transform: translateX(-50%);
-    font-size: 1rem;
-    padding: 10px 20px;
-    z-index: 6;             /* 🔥 Asegura que esté sobre otros elementos */
-    width: 80%;             /* 🔥 Opcional: que el botón se ajuste en móviles */
-    max-width: 250px;
-}
-
+        position: absolute;   /* ✅ usar absolute para Safari */
+        top: 82%;             /* ✅ coloca el botón más arriba */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1rem;
+        padding: 10px 20px;
+        z-index: 6;
+        width: 80%;           /* ✅ que se ajuste en móviles */
+        max-width: 250px;
+    }
 
     .balloon {
         width: 40px;
