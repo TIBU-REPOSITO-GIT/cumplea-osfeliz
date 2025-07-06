@@ -28,7 +28,7 @@ h1 {
     font-family: 'Bubblegum Sans', cursive;
     font-size: 3rem;
     color: #ffffff;
-    text-shadow: 0 0 20px #ff69b4, 0 0 40px #ff69b4;
+    text-shadow: 0 0 5px #ff69b4, 0 0 20px #ff69b4;
     margin: 10px 0 5px 0;
 }
 
