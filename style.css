@@ -236,8 +236,11 @@ h2 {
 
 
     .cake {
-        width: 90px;
-        height: 70px;
+        position: fixed;      /* 🔥 saca el pastel del flujo normal */
+        top: 60%;             /* 🔥 baja el pastel al 60% de la pantalla */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;           /* asegúrate que quede sobre los fuegos */
     }
 
     .plate {
