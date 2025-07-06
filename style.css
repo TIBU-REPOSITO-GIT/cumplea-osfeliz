@@ -31,38 +31,71 @@ h2 {
     font-size: 2.5rem;
     color: #ffffff;
     text-shadow: 0 0 20px #fff700, 0 0 40px #fff700;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    /* Espacio extra para separar pastel */
 }
 
 .balloons {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
 .balloon {
-    width: 60px;
-    height: 80px;
+    --color: #ff69b4;
+    --text-color: #fff;
+    width: 70px;
+    height: 90px;
     border-radius: 50% 50% 45% 45%;
+    background: radial-gradient(circle at 35% 35%, #ffffff80, var(--color) 70%);
+    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.2), inset 5px 5px 15px rgba(0, 0, 0, 0.2), 0 8px 15px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    color: white;
-    text-shadow: 0 0 10px #000;
-    animation: float 3s ease-in-out infinite;
+    color: var(--text-color);
+    text-shadow: 0 0 8px var(--text-color);
+    position: relative;
+    animation: sway 6s ease-in-out infinite alternate;
 }
 
-@keyframes float {
-    0%,
-    100% {
-        transform: translateY(0px);
+.balloon::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 15px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: rotate(-20deg);
+}
+
+.balloon::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    width: 2px;
+    height: 25px;
+    background: #555;
+    border-radius: 1px;
+}
+
+@keyframes sway {
+    0% {
+        transform: translateY(0px) rotate(-2deg);
     }
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-10px) rotate(2deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(-2deg);
     }
 }
+
+
+/* 🎂 Pastel */
 
 .cake {
     position: relative;
@@ -137,6 +170,9 @@ h2 {
         opacity: 0.85;
     }
 }
+
+
+/* 🎵 Botón de música */
 
 .play-button {
     margin-top: 20px;
