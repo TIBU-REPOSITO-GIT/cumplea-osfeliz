@@ -39,7 +39,8 @@ h2 {
     justify-content: center;
     gap: 15px;
     margin-bottom: 30px;
-    flex-wrap: wrap; /* 💡 permite que los globos salten de línea en móviles */
+    flex-wrap: wrap; /* 💡 Permite que los globos bajen en móviles */
+    margin-top: 20px; /* 💡 Añade espacio superior para móviles */
 }
 
 .balloon {
@@ -191,14 +192,6 @@ h2 {
         font-size: 1.5rem;
     }
 
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
     .cake {
         width: 120px;
         height: 90px;
@@ -212,6 +205,14 @@ h2 {
     .layers, .icing {
         width: 120px;
         left: calc(50% - 60px);
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
     }
 }
 
@@ -227,12 +228,22 @@ h2 {
         height: 70px;
     }
 
+    .plate {
+        width: 110px;
+        left: calc(50% - 55px);
+    }
+
+    .layers, .icing {
+        width: 90px;
+        left: calc(50% - 45px);
+    }
+
     h1 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .play-button {
