@@ -95,7 +95,6 @@ h2 {
     100% { transform: translateY(0px) rotate(-2deg); }
 }
 
-/* 🎂 Pastel */
 .cake {
     position: relative;
     width: 150px;
@@ -164,7 +163,6 @@ h2 {
     100% { transform: scale(1.1); opacity: 0.85; }
 }
 
-/* 🎵 Botón de música */
 .play-button {
     margin-top: 20px;
     background: linear-gradient(145deg, #FF5252, #FF1744);
@@ -189,70 +187,14 @@ h2 {
     box-shadow: 0 0 0 #D32F2F, 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* 📱 Responsive */
-@media (max-width: 768px) {
-    .balloon {
-        width: 50px;
-        height: 65px;
-        font-size: 1.5rem;
-    }
-
-    .cake {
-        margin-top: 160px; /* ✅ baja el pastel en tablets */
-    }
-
-    .plate {
-        width: 150px;
-        left: calc(50% - 75px);
-    }
-
-    .layers, .icing {
-        width: 120px;
-        left: calc(50% - 60px);
-    }
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-}
-
 @media (max-width: 480px) {
-    .balloon {
-        width: 40px;
-        height: 55px;
-        font-size: 1.2rem;
-    }
-
     .cake {
-        margin-top: 200px; /* ✅ baja el pastel más en móviles */
+        position: fixed;
+        top: 65%;
+        left: 50%;
+        transform: translateX(-50%);
         width: 90px;
         height: 70px;
-    }
-
-    .plate {
-        width: 110px;
-        left: calc(50% - 55px);
-    }
-
-    .layers, .icing {
-        width: 90px;
-        left: calc(50% - 45px);
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    .play-button {
-        font-size: 1rem;
-        padding: 10px 20px;
+        z-index: 5;
     }
 }
