@@ -43,7 +43,7 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin: 0 auto 20px auto; /* 🔥 reduce espacio inferior */
+    margin: 30 auto 20px auto; /* 🔥 reduce espacio inferior */
     flex-wrap: wrap;
 }
 
