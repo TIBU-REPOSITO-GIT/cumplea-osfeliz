@@ -18,7 +18,12 @@ canvas {
     text-align: center;
     color: white;
     padding-top: 50px;
+    min-height: 100vh; /* 🔥 fuerza altura completa de pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 h1 {
     font-family: 'Bubblegum Sans', cursive;
@@ -250,7 +255,7 @@ h2 {
     }
 
     h2 {
-        font-size: 1.4rem;
+        margin-bottom: 80px;
     }
 
     .play-button {
