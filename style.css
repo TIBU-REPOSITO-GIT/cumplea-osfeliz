@@ -234,13 +234,17 @@ h2 {
     }
 
     .play-button {
-        position: fixed;      /* ✅ sacamos el botón del flujo */
-        top: 82%;             /* ✅ baja el botón más cerca del borde inferior */
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
+    position: fixed;
+    bottom: 20px;           /* 🔥 Separación del borde inferior */
+    left: 50%;              /* 🔥 Centra horizontalmente */
+    transform: translateX(-50%);
+    font-size: 1rem;
+    padding: 10px 20px;
+    z-index: 6;             /* 🔥 Asegura que esté sobre otros elementos */
+    width: 80%;             /* 🔥 Opcional: que el botón se ajuste en móviles */
+    max-width: 250px;
+}
+
 
     .balloon {
         width: 40px;
