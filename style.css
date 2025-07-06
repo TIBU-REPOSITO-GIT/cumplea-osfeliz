@@ -28,14 +28,14 @@ h1 {
     font-family: 'Bubblegum Sans', cursive;
     font-size: 3rem;
     color: #ffffff;
-    text-shadow: 0 0 5px #ff69b4, 0 0 20px #ff69b4;
+    text-shadow: 0 0 3px #ff69b4;
     margin: 10px 0 5px 0;
 }
 
 h2 {
     font-size: 2.2rem;
     color: #fff700;
-    text-shadow: 0 0 5px #fff700, 0 0 10px #fff700;
+    text-shadow: 0 0 3px #fff700;
     margin-bottom: 40px;
 }
 
