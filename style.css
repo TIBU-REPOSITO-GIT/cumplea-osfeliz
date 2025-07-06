@@ -189,12 +189,23 @@ h2 {
 
 @media (max-width: 480px) {
     .cake {
-        position: fixed;
-        top: 65%;
+        position: fixed;     /* 🔥 Saca el pastel del flexbox */
+        top: 65%;            /* 🔥 Bájalo al 65% de la pantalla */
         left: 50%;
         transform: translateX(-50%);
         width: 90px;
         height: 70px;
         z-index: 5;
     }
+
+    .plate {
+        width: 110px;
+        left: calc(50% - 55px);
+    }
+
+    .layers, .icing {
+        width: 90px;
+        left: calc(50% - 45px);
+    }
 }
+
