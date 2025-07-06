@@ -199,10 +199,7 @@ h2 {
 
     
       .cake {
-        position: absolute; /* 🔥 saca el pastel del flujo normal */
-        top: 65%;           /* 🔥 baja el pastel al 65% de la altura */
-        left: 50%;
-        transform: translateX(-50%);
+margin-top: 180px; /* 🔥 aumenta para tablets y móviles */
     }
     }
 
