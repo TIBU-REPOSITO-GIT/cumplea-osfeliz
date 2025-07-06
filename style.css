@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    background: #000;
+    font-family: 'Fredoka One', cursive;
+    overflow: hidden;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+}
+
+h1 {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 0 0 20px #ff69b4, 0 0 40px #ff69b4;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 20px #fff700, 0 0 40px #fff700;
+    margin-bottom: 30px;
+}
+
+.balloons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.balloon {
+    width: 60px;
+    height: 80px;
+    border-radius: 50% 50% 45% 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0 0 10px #000;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.cake {
+    position: relative;
+    width: 150px;
+    height: 120px;
+    margin: 50px auto 0;
+}
+
+.plate {
+    width: 180px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 90px);
+    z-index: 1;
+}
+
+.layers {
+    width: 150px;
+    height: 90px;
+    background: #333;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 75px);
+    z-index: 2;
+}
+
+.icing {
+    width: 150px;
+    height: 30px;
+    background: #ff69b4;
+    border-radius: 50% / 20%;
+    position: absolute;
+    bottom: 90px;
+    left: calc(50% - 75px);
+    z-index: 3;
+}
+
+.candle {
+    width: 10px;
+    height: 30px;
+    background: #800080;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 120px;
+    left: calc(50% - 5px);
+    z-index: 4;
+}
+
+.flame {
+    width: 14px;
+    height: 14px;
+    background: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: -16px;
+    left: -2px;
+    box-shadow: 0 0 30px yellow, 0 0 50px orange;
+    animation: flicker 0.3s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0.85;
+    }
+}
+
+.play-button {
+    margin-top: 20px;
+    background: linear-gradient(145deg, #FF5252, #FF1744);
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    box-shadow: 0 6px 0 #D32F2F, 0 8px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.play-button:hover {
+    transform: translateY(2px);
+    box-shadow: 0 4px 0 #D32F2F, 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.play-button:active {
+    transform: translateY(6px);
+    box-shadow: 0 0 0 #D32F2F, 0 2px 4px rgba(0, 0, 0, 0.3);
+}
