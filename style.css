@@ -228,7 +228,6 @@ h2 {
     }
 
     .cake {
-        margin-top: 200px; /* ✅ baja el pastel más en móviles */
         width: 90px;
         height: 70px;
     }
