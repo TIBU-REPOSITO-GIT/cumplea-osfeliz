@@ -221,14 +221,31 @@ h2 {
 }
 
 @media (max-width: 480px) {
+    h2 {
+        margin-bottom: 90px; /* ✅ más separación debajo de ALISSON */
+    }
+
+    .cake {
+        position: fixed;      /* ✅ sacamos del flujo normal */
+        top: 65%;             /* ✅ baja el pastel al 65% de pantalla */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+    }
+
+    .play-button {
+        position: fixed;      /* ✅ sacamos el botón del flujo */
+        top: 82%;             /* ✅ baja el botón más cerca del borde inferior */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
     .balloon {
         width: 40px;
         height: 55px;
         font-size: 1.2rem;
-    }
-
-    .cake {
-       margin-top: 50px; 
     }
 
     .plate {
@@ -243,14 +260,5 @@ h2 {
 
     h1 {
         font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    .play-button {
-        font-size: 1rem;
-        padding: 10px 20px;
     }
 }
