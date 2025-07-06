@@ -192,8 +192,13 @@ h2 {
         font-size: 1.5rem;
     }
 
-    .cake {
-      margin-top: 180px; /* antes estaba 50px, ahora lo bajamos más */
+    
+      .cake {
+        position: absolute; /* 🔥 saca el pastel del flujo normal */
+        top: 65%;           /* 🔥 baja el pastel al 65% de la altura */
+        left: 50%;
+        transform: translateX(-50%);
+    }
     }
 
     .plate {
